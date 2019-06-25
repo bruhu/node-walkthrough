@@ -8,4 +8,4 @@ const removeWhitespace = input => {
   console.log(result);
 };
 
-removeWhitespace("  sao tome     ");
+// removeWhitespace("  sao tome     ");
