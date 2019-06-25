@@ -5,5 +5,3 @@ exports.showHelp = () => {
   //print output
   console.log(helpText);
 };
-
-showHelp();
