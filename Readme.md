@@ -4,52 +4,53 @@
 
 1. Push your result to a new GitHub repo called node-walkthrough and post the link to #exercises on Slack. We're going to do this after each exercise because fearlessness is built from backups. Here's a workflow that works for me:
 
-   a) At the start of each exercise, `checkout` a new branch and `commit` working code at each step as you complete it.
+    a) At the start of each exercise, `checkout` a new branch and `commit` working code at each step as you complete it.
 
-   b) `checkout master` and `merge` your feature branch. `push` once you finish each one to help me keep an eye on progress as you go.
+    b) `checkout master` and `merge` your feature branch. `push` once you finish each one to help me keep an eye on progress as you go.
+    
+    c) Test that your code definitely works on master, then delete unused branches.
 
-   c) Test that your code definitely works on master, then delete unused branches.
+2. In a new file called `messaging.js` write a new function called `showHelp`.
 
-1. In a new file called `messaging.js` write a new function called `showHelp`.
+    a) This function should print help text to the console.
 
-   a) This function should print information to the console if the term `--help` appears anywhere in the argument list.
+    b) Connect this function to `index.js` using CommonJS Module syntax.
+    The function should fire if the term `--help` appears anywhere in the argument list. Think about your control flow before writing code.
 
-   b) Connect this function to `index.js` using CommonJS Module syntax. Think about your control flow before writing code.
+    Remember: Git is your friend.
 
-   Remember: Git is your friend.
+3. In a new file called `formatting.js` write a new function called `removeWhitespace`. This function should take a string as a parameter and:
 
-1. In a new file called `formatting.js` write a new function called `removeWhitespace`. This function should take a string as a parameter and:
+    a) Trim whitespace from the beginning and end of the param
+    
+    b) Collapse spaces (ensure only one space appears at a time, no doubles)
 
-   a) Trim whitespace from the beginning and end of the param
+    Example output:  
 
-   b) Collapse spaces (ensure only one space appears at a time, no doubles)
-
-   Example output:
-
-   - ' sao tome' => 'sao tome'
-   - 'kuala lumpur ' => 'kuala lumpur'
-
+    - '  sao   tome'     => 'sao tome'
+    - 'kuala lumpur  '  => 'kuala lumpur'
+  
 Tip: Use console.log to check your output as you go. Remove any test calls to console.log once you're happy with the output.
 
 Remember: Do the Git dance.
 
 4. Still in `formatting.js` write a new function called `capitalizeInitial`. This function should take a string as a parameter, and return it with only the first letter capitalized.
 
-   Example output:
+    Example output:  
 
-   - 'europe' => 'Europe'
-   - 'BERLIN' => 'Berlin'
-   - 'aSIa' => 'Asia'
+    - 'europe'        => 'Europe'
+    - 'BERLIN'        => 'Berlin'
+    - 'aSIa'          => 'Asia'
 
 Remember: Have you committed lately?
 
 5. Still in `formatting.js` write a new function called `prepareString` that puts an input string through `capitalizeInitial` and `removeWhitespace` then replaces any spaces with underscores.
 
-   Example output:
+    Example output:
 
-   - 'kuala lumpur' => 'Kuala_Lumpur'
-   - ' puerto rico' => 'Puerto_Rico'
-   - ' tokyo' => 'Tokyo'
+    - 'kuala  lumpur'   => 'Kuala_Lumpur'
+    - '  puerto rico'   => 'Puerto_Rico'
+    - ' tokyo'          => 'Tokyo'
 
 There are a million other ways we should sanitize user input before using it in a production app, but this will do for now.
 
