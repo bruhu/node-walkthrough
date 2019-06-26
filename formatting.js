@@ -20,6 +20,6 @@ const removeWhitespace = input => {
 }
 
 const capitalizeInitial = input => {
-  let result = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+  let result = input.charAt(0).toUpperCase() + input.slice(1);
   return result;
 }
