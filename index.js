@@ -1,5 +1,6 @@
 //load external resources - we need relative path so it does not search in node modules
 const { showHelp } = require("./messaging");
+const { prepareString } = require("./formatting");
 
 //handle input
 const args = process.argv.slice(2);
@@ -9,4 +10,7 @@ if (args.includes("--help")) {
   showHelp();
 }
 
-console.log(args);
+//input goes to formatting.js then gets returned back here
+let result = prepareString(args[0]);
+
+console.log(result);
