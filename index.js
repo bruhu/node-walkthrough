@@ -3,6 +3,7 @@ const { showHelp } = require("./messaging");
 const { prepareString } = require("./formatting");
 
 //handle input
+let result = "";
 const args = process.argv.slice(2);
 
 //function should fire if the term --help appears anywhere in the argument list
@@ -12,5 +13,10 @@ if (args.includes("--help")) {
 
 //input goes to formatting.js then gets returned back here
 let result = prepareString(args[0]);
+
+console.log(prepareString('kuala  lumpur'));
+console.log(prepareString('  puerto rico'));
+console.log(prepareString(' tokyo'));
+
 
 console.log(result);

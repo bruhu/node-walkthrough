@@ -1,6 +1,9 @@
 exports.prepareString = input => {
-  let result = removeWhitespace(input).split(" ");
-  result = result.map(word => capitalizeInitial(word)).join("_");
+  let result = removeWhitespace(input)
+  let tmpArray = result.split(" ");
+
+  tmpArray = tmpArray.map(el => capitalizeInitial(el))
+  result = tmpArray.join("_");
   return result;
 };
 
