@@ -1,22 +1,22 @@
-//load external resources - we need relative path so it does not search in node modules
-const { showHelp } = require("./messaging");
-const { prepareString } = require("./formatting");
+// Load external resources
+const { prepareString } = require('./formatting');
+const { showHelp } = require('./messaging');
 
-//handle input
-let result = "";
+// Handle input
+let result = '';
 const args = process.argv.slice(2);
 
-//function should fire if the term --help appears anywhere in the argument list
-if (args.includes("--help")) {
-  showHelp();
+if (args.includes('--help')) {
+    showHelp();
 }
 
-//input goes to formatting.js then gets returned back here
-let result = prepareString(args[0]);
+// input goes to formatting.js then gets returned back here
+result = prepareString(args[0]);
+
+// just testing
 
 console.log(prepareString('kuala  lumpur'));
 console.log(prepareString('  puerto rico'));
 console.log(prepareString(' tokyo'));
-
 
 console.log(result);

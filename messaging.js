@@ -1,7 +1,9 @@
+
 exports.showHelp = () => {
-  //handle input
-  //no input to see here
+  // handle input
+  // no input to see here
   const helpText = "Welcome to my app";
-  //print output
+
+  // print output
   console.log(helpText);
-};
+}
