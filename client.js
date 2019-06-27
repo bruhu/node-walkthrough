@@ -1,4 +1,5 @@
 const { version, name } = require("./package.json");
+const { prepareString } = require("./formatting");
 
 const axios = require("axios");
 
@@ -56,3 +57,5 @@ getTimeData(arguments[0], arguments[1]).then(data => {
   }
   process.exit();
 });
+
+console.log(area, city);
