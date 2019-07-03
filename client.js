@@ -32,6 +32,7 @@ if (arguments.includes("--option")) {
     .then(data => {
       return data.reduce((acc, curr) => {
         const [area, city] = curr.split("/");
+        
         acc.push({ area, city });
         return acc;
       }, []);
@@ -57,5 +58,3 @@ getTimeData(arguments[0], arguments[1]).then(data => {
   }
   process.exit();
 });
-
-console.log(area, city);
