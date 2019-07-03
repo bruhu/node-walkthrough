@@ -13,12 +13,13 @@ if (args.includes("--help")) {
 }
 
 // input goes to formatting.js then gets returned back here
-result = prepareString(args[0]);
+area = prepareString(args[0]);
+city = prepareString(args[1]);
 
 // just testing
 
-console.log(prepareString("kuala  lumpur"));
-console.log(prepareString("  puerto rico"));
-console.log(prepareString(" tokyo"));
+// console.log(prepareString("kuala  lumpur"));
+// console.log(prepareString("  puerto rico"));
+// console.log(prepareString(" tokyo"));
 
-console.log(result);
+getTimeData(area, city);
